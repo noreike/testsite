@@ -1,0 +1,232 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, a:visited, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.625;
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  font-size: 1.6em;
+  font-weight: bold;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+
+h2:after {
+  content: "";
+  background: #cccccc;
+  border-left: 30px solid #c12100;
+  display: block;
+  width: 100%;
+  height: 4px;
+}
+
+.note {
+  font-size: 0.8em;
+  margin-bottom: 1rem;
+}
+
+ol {
+  list-style-type: none;
+  margin-top: 2rem;
+}
+
+ol li {
+  list-style-type: none;
+  counter-increment: cnt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+ol li:before {
+  content: counter(cnt) ".";
+  font-weight: bold;
+  margin-right: .25rem;
+}
+
+ol li > span {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+ol li > span > *:first-child {
+  min-width: 60%;
+}
+
+ol li .item, ol li .id {
+  font-weight: bold;
+}
+
+a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+a:after {
+  content: "";
+  background: url(https://www.asahi-life.co.jp/common2019/images/arrow.png) no-repeat right center;
+  background-size: 1em;
+  width: 1.25em;
+  height: 1.625em;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+a:hover {
+  color: #c12100;
+}
+
+.search_result ol li {
+  margin-bottom: 2rem;
+}
+
+form[name="yakuzai"] {
+  margin-bottom: 120px;
+}
+
+form[name="yakuzai"] .sbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+form[name="yakuzai"] .sbox input {
+  height: 2.5rem;
+  padding: 0 1rem;
+}
+
+form[name="yakuzai"] .sbox input[type="text"] {
+  background: url(https://www.asahi-life.co.jp/common2019/images/search_icon.svg) no-repeat left 1em top 0.3em;
+  background-size: 1.5em;
+  padding-left: 4em;
+  border: 1px solid #000;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 1.125rem;
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+}
+
+form[name="yakuzai"] .sbox input[type="submit"] {
+  background: #c12100 url(https://www.asahi-life.co.jp/common2019/images/arrow_on.svg) no-repeat right 1.5em top 0.2em;
+  background-size: 1em;
+  color: #fff;
+  border: 1px solid #c12100;
+  padding-left: 2.5em;
+  padding-right: 3.5em;
+  font-size: 1.5625rem;
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+form[name="yakuzai"] .sbox input[type="submit"]:before {
+  content: "検索";
+}
+
+form[name="yakuzai"] input[type="radio"] {
+  border: 2px solid #1C80C3;
+  border-radius: 50%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+}
+
+form[name="yakuzai"] input[type="radio"]:before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 2px;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all ease-out 250ms;
+  transition: all ease-out 250ms;
+}
+
+form[name="yakuzai"] input[type="radio"]:checked:before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background-color: #1C80C3;
+}
+
+form[name="yakuzai"] label {
+  vertical-align: top;
+}
+
+.search_top form[name="yakuzai"] .sbox input {
+  height: 3.6rem;
+  background-position-y: .9rem;
+}
+
+@media print, screen and (max-width: 767px) {
+  ol li > span {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  ol li > span span {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  ol li > span span.link {
+    text-align: right;
+  }
+  .search_detail li > span {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .search_detail li > span span {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+  form[name="yakuzai"] .sbox input[type="text"] {
+    background: none;
+    padding-left: 1em;
+    border-top-left-radius: .1rem;
+    border-bottom-left-radius: .1rem;
+    font-size: .9rem;
+    height: 3.4rem;
+  }
+  form[name="yakuzai"] .sbox input[type="submit"] {
+    text-indent: -9999px;
+    padding: 0 .75em;
+    background-image: url("data:image/svg+xml;charset=utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2040%2040%22%20style%3D%22enable-background%3Anew%200%200%2040%2040%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3A%23ffffff%3B%7D%3C%2Fstyle%3E%3Cg%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M17.6%2C32.73c1.25%2C0.04%2C2.47-0.14%2C3.69-0.41c1.05-0.23%2C1.77%2C0.14%2C1.88%2C0.96c0.14%2C0.97-0.47%2C1.35-1.31%2C1.56%20C12.2%2C37.32%2C1.77%2C30.97%2C0.21%2C20.46C-1.47%2C9.15%2C7.12-0.36%2C18.52%2C0.01c8.5%2C0.28%2C15.89%2C7.3%2C16.69%2C15.76c0.45%2C4.7-0.72%2C8.91-3.54%2C12.65%20c-0.49%2C0.65-0.42%2C1.04%2C0.12%2C1.57c2.37%2C2.33%2C4.71%2C4.7%2C7.06%2C7.05c0.23%2C0.23%2C0.47%2C0.46%2C0.69%2C0.71c0.52%2C0.6%2C0.65%2C1.25%2C0.06%2C1.86%20c-0.63%2C0.65-1.31%2C0.51-1.94-0.05c-0.25-0.22-0.47-0.46-0.71-0.69c-2.77-2.76-5.53-5.53-8.3-8.29c-0.99-0.99-0.99-1.52-0.03-2.59%20c3.95-4.41%2C5.11-9.51%2C3.26-15.07C30.05%2C7.37%2C26.05%2C4%2C20.31%2C2.86C11.87%2C1.18%2C3.5%2C7.57%2C2.67%2C16.11c-0.82%2C8.42%2C5.18%2C15.37%2C12.85%2C16.51%20C16.21%2C32.72%2C16.91%2C32.69%2C17.6%2C32.73z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+    background-position: center center;
+    background-size: 2.2rem;
+    border-top-right-radius: .1rem;
+    border-bottom-right-radius: .1rem;
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+}
