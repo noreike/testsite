@@ -1,7 +1,10 @@
 $(window).on('load resize', function(){
+    var msg = {
+        href: location.href,
+        height: 0
+    };
     setTimeout(function(){
-        var height = $('body').height();
-        window.parent.postMessage(height, 'http://dev2.ball-inc.co.jp/');
-        //window.parent.postMessage(height, window.parent.origin);
+        msg.height = $('body').height();
+        window.parent.postMessage(msg, 'http://dev2.ball-inc.co.jp/');
     },500);
 });
