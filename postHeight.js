@@ -3,11 +3,9 @@ $(window).on('load resize', function(){
         href: location.href,
         height: 0
     };
-    //window.parent.postMessage(msg, 'http://dev2.ball-inc.co.jp/');
+    window.parent.postMessage(msg, 'http://dev2.ball-inc.co.jp/');
     setTimeout(function(){
-        if(msg.height != $('body').height()){
-            msg.height = $('body').height();
-            window.parent.postMessage(msg, 'http://dev2.ball-inc.co.jp/');
-        }
+        msg.height = $('body').height();
+        window.parent.postMessage(msg, 'http://dev2.ball-inc.co.jp/');
     },500);
 });
