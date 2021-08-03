@@ -6,6 +6,7 @@ $(window).on('load resize', function(){
     };
     //window.parent.postMessage(msg, 'http://dev2.ball-inc.co.jp/');
     setTimeout(function(){
+        msg.bodyClass = document.body.className;
         msg.height = $('body').height();
         window.parent.postMessage(msg, 'https://asahi.cms-wr.biglobe.ne.jp/');
     },500);
