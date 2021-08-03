@@ -1,6 +1,7 @@
 $(window).on('load resize', function(){
+    var currentBody = document.getElementsByTagName('body');
     var msg = {
-        bodyClass: document.getElementsByTagName('body').className,
+        bodyClass: currentBody.className,
         href: location.href,
         height: 0
     };
